@@ -9,6 +9,8 @@ const buttonFinalGabarito = document.querySelector('.button-final-gabarito')
 
 const paragraph = document.createElement('p')
 
+const alternativasCorrects = ['C', 'C' ,'C' ,'B']
+
 let score = 0
 
 button.addEventListener('click', () => {
@@ -26,8 +28,6 @@ popupWrapper.addEventListener('click', event => {
     }
 
 })
-
-const alternativasCorrects = ['C', 'C' ,'C' ,'B']
 
 const respostaDoUsuario = ( ) => {
     let alternativas = []
