@@ -24,10 +24,10 @@ popupWrapper.addEventListener('click', event => {
         
     if(testandoClasses){
        popupWrapper.style.display = 'none'
-        
     }
-
 })
+
+
 
 const respostaDoUsuario = ( ) => {
     let alternativas = []
@@ -43,39 +43,32 @@ const insertParagraph = () => {
     paragraph.textContent = `Parabéns 😃👏🏽👏🏽`
 }
 
-const getSoreTela = (alternativas) => {
+const getSoreTela = alternativas => {
+     score = 0
     alternativas.forEach((alternativa,index) => {
+      
         const testandoRespostas = alternativa === alternativasCorrects[index] 
         if(testandoRespostas) {
-            score += 25        
-            insertParagraph()
-           return
+            score += 25    
+            insertParagraph()  
         }
-       
     })
+    popupPontuação.textContent = `${score}%`
 }
 
 const ShowScore = () => {
+
     let counter = 0 
 
     const timer = setInterval(() => {
         if(counter === score) {
             clearInterval(timer)
+        
         }
         popupPontuação.textContent = `${counter++}%`  
 
     }, 10)
 }
-
-form.addEventListener('submit', event => {
-    event.preventDefault()
-
-    const alternativas = respostaDoUsuario()
-
-    getSoreTela(alternativas)
-    ShowScore()
-      
-})
 
 buttonGabarito.addEventListener('click',() => {
     popupGabarito.style.display = "block"
@@ -107,3 +100,14 @@ popupGabarito.addEventListener('click', event => {
         popupWrapper.style.display = "none"
     }
 })
+const grupDeFuncDoListener =  event => {
+    event.preventDefault()
+    
+    const alternativas = respostaDoUsuario()
+
+    getSoreTela(alternativas)
+    ShowScore()
+      
+}
+
+form.addEventListener('submit',grupDeFuncDoListener)
