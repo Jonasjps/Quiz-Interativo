@@ -166,7 +166,7 @@ color: red;
 }
 
 .laranja {
-  color: orange;
+  color: rgb(3, 46, 203);
 }
 
 .verde {
@@ -175,6 +175,10 @@ color: red;
 #btn {
   display: inline-block;
 }
+
+
+
+
 
 
 
