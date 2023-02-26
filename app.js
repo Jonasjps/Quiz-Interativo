@@ -133,7 +133,7 @@ finalGabarito.addEventListener('click', () => {
     RolandoAtela()
 })
 
-buttonFinalGabarito.addEventListener('click',() => {
+buttonFinalGabarito.addEventListener('click', () => {
     popupWrapper.style.display = "none"
 
     RolandoAtela()
