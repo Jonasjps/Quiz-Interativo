@@ -176,6 +176,7 @@ color: red;
   display: inline-block;
 }
  footer {
+    wi:
     background:  #023535;
     border-radius: 4px;
     margin:auto;
@@ -184,6 +185,7 @@ color: red;
   }
   
   .p-footer {
+    width: 600px;
     color: white;
     margin: 0px;
     text-align: center;
