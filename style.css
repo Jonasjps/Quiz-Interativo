@@ -182,7 +182,7 @@ color: red;
     border-radius: 100px;
     margin:auto;
     margin-top: 20px;
-    box-shadow: 2px 2px 5px rgb(0, 195, 255);
+    box-shadow: 2px 2px 5px white;
   }
   
   .p-footer {
